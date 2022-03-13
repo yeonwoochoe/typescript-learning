@@ -10,7 +10,7 @@ age = 30;
 
 let userName: string;
 
-userName = "yeonwoo";
+userName = "yeonwoo"; // 유형 추론
 
 let isInstructor: boolean;
 
@@ -45,6 +45,12 @@ people = [
 // person = {
 //   isEmployee:true
 // } 잘못된 타입 설정
+
+//타입 주석(type annotation) : 변수 n뒤의 콜론(:)과 타입 이름
+//타입 추론(type inference) : 2행처럼 타입 부분을 생략할 수도 있다. 타입스크립트는 변수와 타입부분이 생략되면 대입 연산자의 오른쪽 값을 분석해 왼쪽 변수의 타입을 결정한다.
+
+let course = "React";
+course = 12345; //오류발생
 
 // function showItem(arr: number[]) {
 //   arr.forEach((item) => {

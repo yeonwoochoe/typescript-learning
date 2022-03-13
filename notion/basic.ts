@@ -49,7 +49,8 @@ people = [
 //타입 주석(type annotation) : 변수 n뒤의 콜론(:)과 타입 이름
 //타입 추론(type inference) : 2행처럼 타입 부분을 생략할 수도 있다. 타입스크립트는 변수와 타입부분이 생략되면 대입 연산자의 오른쪽 값을 분석해 왼쪽 변수의 타입을 결정한다.
 
-let course = "React";
+//유니온타입 :자바스크립트의 OR 연산자(||)와 같이 'A' 이거나 'B'이다라는 의미의 타입
+let course: string | number = "React";
 course = 12345; //오류발생
 
 // function showItem(arr: number[]) {

@@ -20,22 +20,22 @@ let hobbies: string[];
 
 hobbies = ["cooking", "sports"];
 
-//let person: any; //어떤 타입이던간에 알려주지 않을 거라는 의미 , 대체타입, 보통 사용하지 않음
-
-let person: {
+type Person = {
   name: string;
   age: number;
 };
+
+//let person: any; //어떤 타입이던간에 알려주지 않을 거라는 의미 , 대체타입, 보통 사용하지 않음
+
+let person: Person;
+//타입 별칭 (Type Aliases)
 
 person = {
   name: "yenowoo",
   age: 30,
 };
 
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[]; // 타입 별칭을 사용하면 이렇게 변형하여 사용도 가능하다.
 
 people = [
   { name: "yenowoo", age: 30 },

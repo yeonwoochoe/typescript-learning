@@ -95,3 +95,15 @@ const benz: Benz = {
 };
 
 //제네릭(Generics)
+
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray; // 기존 배열이 바뀌지 않는다는점 , 새로운 배열탄생
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); //[-1, 1,2,3]
+const stringArray = insertAtBeginning(["a", "b", "c"], "d");
+
+updatedArray[0].split(""); //문자열을 쪼개서 배열로 만드는 메서드.

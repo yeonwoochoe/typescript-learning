@@ -60,3 +60,38 @@ course = 12345; //오류발생
 // }
 
 // console.log(showItem([1, 2, 3]));
+
+//Function & Type
+
+function addShow(a: number, b: number) {
+  return a + b;
+}
+
+function print(value: any) {
+  console.log(value);
+}
+
+interface Car {
+  color: string;
+  wheels: number;
+  start(): void;
+}
+
+interface Benz extends Car {
+  door: number;
+  stop(): void;
+}
+
+const benz: Benz = {
+  color: "white",
+  wheels: 4,
+  door: 5,
+  stop() {
+    console.log("stop");
+  },
+  start() {
+    console.log("go..");
+  },
+};
+
+//제네릭(Generics)

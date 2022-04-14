@@ -137,3 +137,16 @@ const k: IKoren = {
   city: "안양",
   age: 30,
 };
+
+//interface로 function 표현하기
+
+interface HelloPerson {
+  (name: string, age?: number): void;
+}
+const helloPerson: HelloPerson = function (n, a) {
+  console.log(`안녕하세요 ${n}입니다. 나이는 ${a}`);
+};
+
+// 매개 변수 이름이 인터페이스와 일치할 필요가 없습니다.
+// 또한 타입 추론을 통해 매개 변수를 순서에 맞게 암시적 타입으로 제공할 수 있습니다.
+helloPerson("연우", 30);

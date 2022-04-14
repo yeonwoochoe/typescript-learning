@@ -150,3 +150,24 @@ const helloPerson: HelloPerson = function (n, a) {
 // 매개 변수 이름이 인터페이스와 일치할 필요가 없습니다.
 // 또한 타입 추론을 통해 매개 변수를 순서에 맞게 암시적 타입으로 제공할 수 있습니다.
 helloPerson("연우", 30);
+
+const helloPersons: HelloPerson = function (name: string, age: number) {
+  console.log(`안녕하세요! ${name} ${age} 입니다.`);
+}; // error 할당 불가 하다고 하는데 이해가 안감 ㅠ
+helloPersons("연우", 30);
+
+//reade only
+
+interface Person8 {
+  name: string;
+  age?: number;
+  readonly gender: string;
+}
+
+// 한번 넣고 바뀌지 않는 값이라면, readonly를 붙여주는 버릇이 필요함
+const p81: Person8 = {
+  name: "Mark",
+  gender: "male",
+};
+
+p81.gender = "female"; //읽기전용이기 떄문에 타입에러가나옴
